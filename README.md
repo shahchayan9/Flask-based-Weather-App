@@ -78,8 +78,7 @@ Usage
 1. Navigate to the application: Open your web browser and go to http://localhost:5000.
 
 2. Enter a city name: Type the name of a city into the input field and click the "Get Weather" button.
-3. 
-4. View the weather information: The current weather information for the entered city will be displayed.
+3. View the weather information: The current weather information for the entered city will be displayed.
 
 Acknowledgments
 1. OpenWeatherMap API for providing the weather data.
