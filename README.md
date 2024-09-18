@@ -9,7 +9,32 @@ This is a Dockerized Flask application that allows users to enter the name of an
 - **Weather Display**: Shows the current temperature, weather conditions (e.g., clear, cloudy, rainy), and other relevant information.
 
 ## Project Structure
- ├── app.py ├── Dockerfile ├── requirements.txt ├── templates │ └── index.html ├── static │ └── styles.css ├── tests │ └── test_app.py └── docker-compose.yml
+.
+├── app.py
+├── Dockerfile
+├── requirements.txt
+├── templates
+│   └── index.html
+├── static
+│   └── styles.css
+├── tests
+│   └── test_app.py
+├── screenshots
+│   ├── screenshot1.png
+│   ├── screenshot2.png
+│   ├── screenshot3.png
+│   ├── screenshot4.png
+│   ├── screenshot5.png
+│   ├── screenshot6.png
+│   ├── screenshot7.png
+│   ├── screenshot8.png
+│   ├── screenshot9.png
+│   ├── screenshot10.png
+│   ├── screenshot11.png
+│   └── screenshot12.png
+│   ├── screenshot13.png
+│   ├── screenshot14.png
+└── docker-compose.yml
 
  
 ## Getting Started
