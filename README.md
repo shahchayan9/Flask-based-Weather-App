@@ -35,6 +35,7 @@ This is a Dockerized Flask application that allows users to enter the name of an
 │   ├── screenshot13.png
 │   ├── screenshot14.png
 └── docker-compose.yml
+.
 
  
 ## Getting Started
