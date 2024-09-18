@@ -10,16 +10,17 @@ This is a Dockerized Flask application that allows users to enter the name of an
 
 ## Project Structure
 .
-├── app.py
-├── Dockerfile
-├── requirements.txt
-├── templates
-│   └── index.html
-├── static
-│   └── styles.css
-├── tests
-│   └── test_app.py
-├── screenshots
+├── app.py                  # Main application entry point (Flask/Django/FastAPI or other)
+├── Dockerfile               # Instructions to build the Docker image
+├── docker-compose.yml       # Configuration file for Docker Compose (used for multi-container Docker applications)
+├── requirements.txt         # List of Python dependencies to be installed (via pip)
+├── templates/               # Folder containing HTML templates for the frontend
+│   └── index.html           # Main HTML template
+├── static/                  # Folder for static assets (CSS, JavaScript, images, etc.)
+│   └── styles.css           # Main stylesheet for the application
+├── tests/                   # Folder containing test files
+│   └── test_app.py          # Test script for the application (e.g., using pytest)
+├── screenshots/             # Folder containing screenshots for documentation or demo purposes
 │   ├── screenshot1.png
 │   ├── screenshot2.png
 │   ├── screenshot3.png
@@ -31,11 +32,10 @@ This is a Dockerized Flask application that allows users to enter the name of an
 │   ├── screenshot9.png
 │   ├── screenshot10.png
 │   ├── screenshot11.png
-│   └── screenshot12.png
-│   ├── screenshot13.png
-│   ├── screenshot14.png
-└── docker-compose.yml
-.
+│   ├── screenshot12.png
+│   └── screenshot13.png
+│   └── screenshot14.png
+
 
  
 ## Getting Started
