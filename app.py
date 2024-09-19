@@ -5,6 +5,10 @@ from datetime import datetime, timedelta
 import pytz # type: ignore
 import json
 import logging
+import time
+import gc
+import threading
+from memory_profiler import profile
 
 app = Flask(__name__)
 
@@ -22,6 +26,7 @@ def index():
     return render_template('index.html')  # Remove OPENWEATHERMAP_API_KEY parameter
 
 @app.route('/weather', methods=['GET'])
+@profile
 def get_weather():
     app.logger.debug(f"Received request with args: {request.args}")
     city = request.args.get('city')
@@ -76,5 +81,21 @@ def suggest():
     suggestions = [city for city in CITIES if query in city.lower()]
     return jsonify(suggestions[:5])  # Return top 5 suggestions
 
+def log_gc_stats():
+    while True:
+        gc_stats = gc.get_stats()
+        app.logger.info(f"GC stats: {gc_stats}")
+        time.sleep(60)  # Log GC stats every 60 seconds
+
 if __name__ == '__main__':
+    start_time = time.time()
+    app.logger.info(f"Application starting...")
+    
+    # Start a thread to log GC statistics
+    gc_thread = threading.Thread(target=log_gc_stats, daemon=True)
+    gc_thread.start()
+    
     app.run(host='0.0.0.0', port=5000, debug=True)
+    end_time = time.time()
+    startup_time = end_time - start_time
+    app.logger.info(f"Application startup time: {startup_time} seconds")
